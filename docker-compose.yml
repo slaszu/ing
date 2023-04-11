@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    container_name: ing-app
+    restart: always
+    image: openjdk:17-bullseye
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./:/ing
+    entrypoint: /ing/docker-entrypoint.sh
